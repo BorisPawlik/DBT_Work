@@ -4,7 +4,7 @@ WITH source AS (
         days_feeling_burnout_per_month,
         weekly_offline_hours,
         job_satisfaction_score
-    FROM {{ source('dbt_demo', 'productivity') }}
+    FROM {{ source('dbt_productivity', 'productivity') }}
 ),
 
 with_ids AS (
