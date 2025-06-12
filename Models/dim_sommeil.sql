@@ -3,7 +3,7 @@ WITH source AS (
         sleep_hours,
         screen_time_before_sleep,
         coffee_consumption_per_day
-    FROM {{ source('dbt_demo', 'productivity') }}
+    FROM {{ source('dbt_productivity', 'productivity') }}
 ),
 
 with_ids AS (
