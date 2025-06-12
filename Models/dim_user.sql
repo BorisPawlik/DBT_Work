@@ -2,7 +2,7 @@ WITH source AS (
     SELECT DISTINCT
         age,
         gender
-    FROM {{ source('dbt_demo', 'productivity') }}
+    FROM {{ source('dbt_productivity', 'productivity') }}
 ),
 
 with_ids AS (
