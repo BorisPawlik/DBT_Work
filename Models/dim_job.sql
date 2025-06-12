@@ -1,5 +1,18 @@
-select distinct
-    job_id,
-    work_hours_per_day,
-    break_during_work
-from {{ source('dbt_demo', 'productivity') }}
+WITH source AS (
+    SELECT DISTINCT
+        job_type,
+        work_hours_per_day,
+        breaks_during_work
+    FROM {{ ref('stg_wellbeing_data') }}
+),
+
+with_ids AS (
+    SELECT
+        {{ dbt_utils.generate_surrogate_key(['job_type', 'work_hours_per_day', 'breaks_during_work']) }} AS job_id,
+        job_type,
+        work_hours_per_day,
+        breaks_during_work
+    FROM source
+)
+
+SELECT * FROM with_ids
