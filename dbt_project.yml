@@ -6,5 +6,4 @@ config-version: 2
 model-paths: ["models"]
 
 models:
-  bien_etre_project:
     +materialized: view
