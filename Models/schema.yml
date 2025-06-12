@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: dbt_productivity
-    database: workspace_1
+    database: workspace
     schema: dbt_productivity
     tables:
       - name: productivity
