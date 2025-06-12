@@ -3,7 +3,7 @@ WITH source AS (
         job_type,
         work_hours_per_day,
         breaks_during_work
-    FROM {{ source('dbt_demo', 'productivity') }}
+    FROM {{ source('dbt_productivity', 'productivity') }}
 ),
 
 with_ids AS (
