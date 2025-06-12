@@ -2,7 +2,7 @@ WITH source AS (
     SELECT DISTINCT
         perceived_productivity_score,
         actual_productivity_score
-    FROM {{ source('dbt_demo', 'productivity') }}
+    FROM {{ source('dbt_productivity', 'productivity') }}
 ),
 
 with_ids AS (
