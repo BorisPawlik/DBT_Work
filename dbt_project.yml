@@ -3,8 +3,8 @@ version: '1.0'
 
 config-version: 2
 
-model-paths: ["models"]
+model-paths: ["Models"]
 
-models:
+Models:
   bien_etre_project:
     +materialized: view
