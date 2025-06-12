@@ -5,7 +5,7 @@ WITH source AS (
         number_of_notifications,
         uses_focus_apps,
         has_digital_wellbeing_enabled
-    FROM {{ source('dbt_demo', 'productivity') }}
+    FROM {{ source('dbt_productivity', 'productivity') }}
 ),
 
 with_ids AS (
