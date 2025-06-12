@@ -1,20 +1,10 @@
-name: 'bien_etre_project'
-version: '1.0.0'
-config-version: 2 
+name: bien_etre_project
+version: '1.0'
 
-profile: 'bien_etre_profile'
-
-target-path: "target"
-clean-targets:
-  - "target"
-  - "dbt_packages"
+config-version: 2
 
 model-paths: ["models"]
 
 models:
   bien_etre_project:
     +materialized: view
-    staging:
-      +materialized: ephemeral
-    marts:
-      +materialized: table
