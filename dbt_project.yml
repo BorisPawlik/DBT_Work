@@ -9,4 +9,5 @@ models:
   bien_etre_project:
     +catalog: workspace_1
     +schema: dbt_productivity
+    +schema_suffix: ""
     +materialized: table
