@@ -18,7 +18,7 @@ WITH base AS (
             'weekly_offline_hours',
             'job_satisfaction_score'
         ]) }} AS sante_id
-    FROM {{ source('dbt_demo', 'productivity') }} src
+    FROM {{ source('dbt_productivity', 'productivity') }} src
 ),
 
 final AS (
