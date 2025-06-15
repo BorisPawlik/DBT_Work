@@ -1,6 +1,6 @@
 SELECT
     {{ dbt_utils.generate_surrogate_key([
-        'job_type',
+        'job_type'
     ]) }} AS job_id,
     job_type,
 FROM (
