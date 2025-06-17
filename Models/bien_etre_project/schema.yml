@@ -1,10 +1,10 @@
 version: 2
 
 sources:
-  - name: productivity2.csv
+  - name: productivity2
     database: workspace_1
     schema: pipeline
     tables:
-  - name: productivity2.csv
+  - name: productivity2
 
 # 🔁 Modif auto depuis Databricks
