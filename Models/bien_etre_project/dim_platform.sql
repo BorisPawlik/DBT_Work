@@ -6,5 +6,5 @@ SELECT
 FROM (
     SELECT DISTINCT
         social_platform_preference
-    FROM {{ source('dbt_productivity', 'productivity') }}
+    FROM {{ source('pipeline', 'productivity') }}
 ) AS distinct_values
