@@ -1,8 +1,8 @@
 version: 2
 
 sources:
-  - name: dbt_productivity
+  - name: productivity_source
     database: workspace_1
-    schema: dbt_productivity
+    schema: pipeline
     tables:
       - name: productivity
