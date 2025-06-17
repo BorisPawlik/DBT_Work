@@ -9,7 +9,7 @@ model-paths: ["Models"]
 
 models:
   +catalog: workspace_1       # ← appliqué globalement
-  +schema: dbt_productivity   # ← sans préfixe automatique
+  +schema: pipeline   # ← sans préfixe automatique
   +materialized: table        # ← tous les modèles seront matérialisés en tables
 
   bien_etre_project:          # ← ton nom de projet
