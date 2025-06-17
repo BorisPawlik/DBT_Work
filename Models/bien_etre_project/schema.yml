@@ -1,10 +1,10 @@
 version: 2
 
 sources:
-  - name: pipeline
+      - name: Placement_Data_Full_Class
     database: workspace_1
     schema: pipeline
     tables:
-      - name: productivity
+      - name: Placement_Data_Full_Class
 
 # 🔁 Modif auto depuis Databricks
