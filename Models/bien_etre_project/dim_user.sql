@@ -10,5 +10,5 @@ FROM (
         gender,
         uses_focus_apps,
         has_digital_wellbeing_enabled
-    FROM {{ source('dbt_productivity', 'productivity') }}
+    FROM {{ source('pipeline', 'productivity') }}
 ) AS distinct_values
