@@ -38,4 +38,4 @@ SELECT
     weekly_offline_hours,
     job_satisfaction_score
 
-FROM {{ source('dbt_productivity', 'productivity') }}
+FROM {{ source('pipeline', 'productivity') }}
