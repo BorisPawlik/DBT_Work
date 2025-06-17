@@ -6,3 +6,5 @@ sources:
     schema: pipeline
     tables:
       - name: productivity
+
+# 🔁 Modif auto depuis Databricks
