@@ -5,4 +5,4 @@ sources:
     database: workspace_1
     schema: pipeline
     tables:
-      - name: productivity1
+      - name: productivity2
