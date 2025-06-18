@@ -1,8 +1,8 @@
 version: 2
 
 sources:
-  - name: archive/productivity2
+      - name: productivity2
     database: workspace_1
     schema: pipeline
     tables:
-  - name: archive/productivity2
+      - name: productivity2
