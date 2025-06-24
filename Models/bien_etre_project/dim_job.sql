@@ -6,5 +6,5 @@ SELECT
 FROM (
     SELECT DISTINCT
         job_type
-    FROM {{ source('pipeline', 'productivity2') }}
+    FROM {{ source('pipeline', 'productivity1') }}
 ) AS distinct_values
