@@ -11,6 +11,9 @@ models:
   +catalog: workspace_1       # ← appliqué globalement
   +schema: pipeline   # ← sans préfixe automatique
   +materialized: table        # ← tous les modèles seront matérialisés en tables
+  +materialization_overrides:
+      table:
+        version: 2
 
   bien_etre_project:          # ← ton nom de projet
     # Aucun override nécessaire ici
