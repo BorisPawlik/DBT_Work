@@ -15,5 +15,5 @@ FROM (
         gender,
         uses_focus_apps,
         has_digital_wellbeing_enabled
-    FROM {{ source('productivity', 'productivity') }}
+    FROM {{ source('productivity', 'productivity3') }}
 ) AS distinct_values
