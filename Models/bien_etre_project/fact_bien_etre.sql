@@ -1,7 +1,12 @@
+{{ config(
+    materialized='incremental'
+) }}
+
 SELECT
     {{ dbt_utils.generate_surrogate_key(['age', 'gender', 'uses_focus_apps', 'has_digital_wellbeing_enabled']) }} AS user_id,
     {{ dbt_utils.generate_surrogate_key(['job_type']) }} AS job_id,
     {{ dbt_utils.generate_surrogate_key(['social_platform_preference']) }} AS platform_id,
+    {{ dbt_utils.generate_surrogate_key(['_modified']) }} AS time_id,
     {{ dbt_utils.generate_surrogate_key([
         'age',
         'gender',
@@ -21,9 +26,11 @@ SELECT
         'stress_level',
         'days_feeling_burnout_per_month',
         'weekly_offline_hours',
-        'job_satisfaction_score'
+        'job_satisfaction_score',
+        '_modified'
     ]) }} AS fact_id,
 
+    -- mesures
     daily_social_media_time,
     number_of_notifications,
     work_hours_per_day,
@@ -36,6 +43,12 @@ SELECT
     coffee_consumption_per_day,
     days_feeling_burnout_per_month,
     weekly_offline_hours,
-    job_satisfaction_score
+    job_satisfaction_score,
+    _modified
 
 FROM {{ source('productivity', 'productivity') }}
+
+-- Incrément uniquement les nouvelles lignes basées sur _modified
+{% if is_incremental() %}
+  WHERE _modified > (SELECT MAX(_modified) FROM {{ this }})
+{% endif %}
