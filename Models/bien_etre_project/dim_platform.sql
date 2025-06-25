@@ -1,3 +1,7 @@
+{{ config(
+    materialized='table'
+) }}
+
 SELECT
     {{ dbt_utils.generate_surrogate_key([
         'social_platform_preference'
