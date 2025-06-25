@@ -18,7 +18,3 @@ SELECT
 FROM (
     SELECT DISTINCT _modified
     FROM {{ source('productivity', 'productivity') }}
-    {% if is_incremental() %}
-      WHERE _modified > (SELECT MAX(_modified) FROM {{ this }})
-    {% endif %}
-) AS source_data
