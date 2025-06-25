@@ -48,8 +48,3 @@ SELECT
     _modified
 
 FROM {{ source('productivity', 'productivity') }}
-
--- Incrément uniquement les nouvelles lignes basées sur _modified
-{% if is_incremental() %}
-  WHERE _modified > (SELECT MAX(_modified) FROM {{ this }})
-{% endif %}
