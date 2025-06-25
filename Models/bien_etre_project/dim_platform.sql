@@ -11,5 +11,5 @@ SELECT
 FROM (
     SELECT DISTINCT
         social_platform_preference
-    FROM {{ source('productivity3', 'productivity3') }}
+    FROM {{ source('productivity', 'productivity3') }}
 ) AS distinct_values
