@@ -1,6 +1,6 @@
 {{ config(
     materialized='table',
-    unique_user_key='user_id'
+    unique_key='user_id'
 ) }}
 
 SELECT
