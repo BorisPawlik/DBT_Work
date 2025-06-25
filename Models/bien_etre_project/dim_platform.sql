@@ -1,6 +1,6 @@
 {{ config(
     materialized='incremental',
-    uni
+    unique_key='platform_id'
 ) }}
 
 SELECT
