@@ -5,7 +5,7 @@
 
 SELECT
     {{ dbt_utils.generate_surrogate_key([
-        'job_type'Add commentMore actions
+        'job_type'
     ]) }} AS job_id,
     job_type
 FROM (
