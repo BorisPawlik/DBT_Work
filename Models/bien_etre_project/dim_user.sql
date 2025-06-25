@@ -1,5 +1,6 @@
 {{ config(
-    materialized='table'
+    materialized='incremental',
+    unique_key='user_id'
 ) }}
 
 SELECT
@@ -8,11 +9,7 @@ SELECT
     gender,
     uses_focus_apps,
     has_digital_wellbeing_enabled
-FROM (
-    SELECT DISTINCT
-        age,
-        gender,
-        uses_focus_apps,
-        has_digital_wellbeing_enabled
-    FROM {{ source('productivity', 'productivity') }}
-) AS distinct_values
+FROM {{ source('productivity', 'productivity') }}
+{% if is_incremental() %}
+WHERE _modified > (SELECT MAX(_modified) FROM {{ this }})
+{% endif %}
