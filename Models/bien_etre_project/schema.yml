@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: pipeline
+  - name: productivity
     database: workspace_1
     schema: productivity
     tables:
