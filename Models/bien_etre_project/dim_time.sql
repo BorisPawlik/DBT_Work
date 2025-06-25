@@ -18,3 +18,4 @@ SELECT
 FROM (
     SELECT DISTINCT _modified
     FROM {{ source('productivity', 'productivity') }}
+    ) AS distinct_values
