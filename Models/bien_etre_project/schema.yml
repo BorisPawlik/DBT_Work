@@ -5,4 +5,4 @@ sources:
     database: workspace_1
     schema: productivity
     tables:
-      - name: productivity3
+      - name: test
