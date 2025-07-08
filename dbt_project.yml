@@ -15,4 +15,7 @@ models:
       table:
         version: 2
 
-  bien_etre_project: 
+  bien_etre_project:
+    +catalog: workspace_1
+    +schema: pipeline
+    +materialized: incremental
