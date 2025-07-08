@@ -29,6 +29,8 @@ SELECT
         'job_satisfaction_score',
     ]) }} AS fact_id,
 
+    FROM (
+    SELECT DISTINCT(
     -- mesures
     daily_social_media_time,
     number_of_notifications,
