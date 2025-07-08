@@ -1,8 +1,3 @@
-{{ config(
-    materialized='incremental',
-    unique_key='fact_id'
-) }}
-
 SELECT
     {{ dbt_utils.generate_surrogate_key(['age', 'gender', 'uses_focus_apps', 'has_digital_wellbeing_enabled']) }} AS user_id,
     {{ dbt_utils.generate_surrogate_key(['job_type']) }} AS job_id,
