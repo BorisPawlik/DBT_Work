@@ -9,7 +9,7 @@ model-paths: ["Models"]
 
 models:
   +catalog: workspace_1
-  +schema: productivity
+  +schema: pipeline
   +materialized: table
   +materialization_overrides:
       table:
