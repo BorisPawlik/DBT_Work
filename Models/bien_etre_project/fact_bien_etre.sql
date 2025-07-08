@@ -47,4 +47,4 @@ SELECT
     job_satisfaction_score,
     _modified
 
-FROM {{ source('productivity', 'productivity3') }}
+FROM {{ source('pipeline', 'bien_etre_data') }}
