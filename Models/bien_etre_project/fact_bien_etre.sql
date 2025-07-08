@@ -30,20 +30,18 @@ SELECT
     ]) }} AS fact_id,
 
     FROM (
-    SELECT DISTINCT(
-    -- mesures
-    daily_social_media_time,
-    number_of_notifications,
-    work_hours_per_day,
-    perceived_productivity_score,
-    actual_productivity_score,
-    stress_level,
-    sleep_hours,
-    screen_time_before_sleep,
-    breaks_during_work,
-    coffee_consumption_per_day,
-    days_feeling_burnout_per_month,
-    weekly_offline_hours,
-    job_satisfaction_score,
-
-FROM {{ source('pipeline', 'bien_etre_data') }}
+        SELECT DISTINCT
+            daily_social_media_time,
+            number_of_notifications,
+            work_hours_per_day,
+            perceived_productivity_score,
+            actual_productivity_score,
+            stress_level,
+            sleep_hours,
+            screen_time_before_sleep,
+            breaks_during_work,
+            coffee_consumption_per_day,
+            days_feeling_burnout_per_month,
+            weekly_offline_hours,
+            job_satisfaction_score,
+    FROM {{ source('pipeline', 'bien_etre_data') }}
