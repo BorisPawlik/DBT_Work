@@ -27,7 +27,7 @@ SELECT
         'days_feeling_burnout_per_month',
         'weekly_offline_hours',
         'job_satisfaction_score',
-    ]) }} AS fact_id,
+    ]) }} AS fact_id
 
     daily_social_media_time,
     number_of_notifications,
@@ -42,4 +42,5 @@ SELECT
     days_feeling_burnout_per_month,
     weekly_offline_hours,
     job_satisfaction_score
+    
 FROM {{ source('pipeline', 'bien_etre_data') }}
