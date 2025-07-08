@@ -1,8 +1,8 @@
 version: 2
 
 sources:
-  - name: pipeline
+  - name: productivity
     database: workspace_1
-    schema: productivity
+    schema: pipeline
     tables:
       - name: bien_etre_data
