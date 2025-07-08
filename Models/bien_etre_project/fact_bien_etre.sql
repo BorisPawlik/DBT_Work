@@ -43,6 +43,6 @@ FROM (
         coffee_consumption_per_day,
         days_feeling_burnout_per_month,
         weekly_offline_hours,
-        job_satisfaction_score,
+        job_satisfaction_score
     FROM {{ source('pipeline', 'bien_etre_data') }}
 ) AS distinct_values
