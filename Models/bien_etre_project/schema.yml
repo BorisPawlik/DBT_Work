@@ -3,6 +3,6 @@ version: 2
 sources:
   - name: productivity
     database: workspace_1
-    schema: productivity
+    schema: pipeline
     tables:
-      - name: productivity3
+      - name: bien_etre_data
