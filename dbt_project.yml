@@ -3,17 +3,16 @@ version: '1.0'
 
 config-version: 2
 
-profile: databricks_profile  # ← le nom de ton profile dans ~/.dbt/profiles.yml
+profile: databricks_profile
 
 model-paths: ["Models"]
 
 models:
-  +catalog: workspace_1       # ← appliqué globalement
-  +schema: pipeline   # ← sans préfixe automatique
-  +materialized: table        # ← tous les modèles seront matérialisés en tables
+  +catalog: workspace_1
+  +schema: pipeline
+  +materialized: table
   +materialization_overrides:
       table:
         version: 2
 
-  bien_etre_project:          # ← ton nom de projet
-    # Aucun override nécessaire ici
+  bien_etre_project: 
