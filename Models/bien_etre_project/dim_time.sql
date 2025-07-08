@@ -17,5 +17,5 @@ SELECT
 
 FROM (
     SELECT DISTINCT _modified
-    FROM {{ source('productivity', 'productivity3') }}
+    FROM {{ source('pipeline', 'bien_etre_data') }}
     ) AS distinct_values
