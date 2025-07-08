@@ -28,7 +28,6 @@ SELECT
         'days_feeling_burnout_per_month',
         'weekly_offline_hours',
         'job_satisfaction_score',
-        '_modified'
     ]) }} AS fact_id,
 
     -- mesures
@@ -45,6 +44,5 @@ SELECT
     days_feeling_burnout_per_month,
     weekly_offline_hours,
     job_satisfaction_score,
-    _modified
 
 FROM {{ source('pipeline', 'bien_etre_data') }}
